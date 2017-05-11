@@ -2,7 +2,7 @@
 
 ### By Andrew Lee
 
-![Alan Turing](assets/cover.png | width=250)
+![](assets/cover.png | width=250)
 
 
 
@@ -38,8 +38,3 @@ Hello World
 ## Contact
 Feel free to contact me at [leeas@stolaf.edu](mailto:leeas@stolaf.edu) if you have any suggestions, or want to contribute to this project.
 
-<!--## Special Thanks-->
-
-<!--Also, AFCH from [GRA & AFCH](https://github.com/afch) who produces the nixie clock kit I bought was also monumental in helping me modify his Arduino Sketch and to add serial USB communication functionality between the Pi and the Clock.-->
-
-<!--![Desk](assets/desk.jpg)-->
