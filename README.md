@@ -2,7 +2,7 @@
 
 ### By Andrew Lee
 
-![Alan Turing](assets/cover.jpg | width=250)
+![Alan Turing](assets/cover.png | width=250)
 
 
 
