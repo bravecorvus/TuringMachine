@@ -2,7 +2,7 @@
 
 ### By Andrew Lee
 
-![](assets/cover.png | width=250)
+![](assets/cover.png)
 
 
 
