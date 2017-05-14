@@ -14,10 +14,10 @@ import (
 )
 
 type tmnode struct {
-	name     string
-	neighbor []string
-	start    bool
-	accept   bool
+	name string
+	//neighbor []string
+	//start    bool
+	//accept   bool
 }
 
 func runTM(arg tmnode, filepath string, wg *sync.WaitGroup) {
@@ -27,7 +27,7 @@ func runTM(arg tmnode, filepath string, wg *sync.WaitGroup) {
 var turingMachineModel = tmnode{}
 
 func init() {
-	//var turingMachineModel=[]tmnode
+	//var turingMachineModel = tmnode{}
 }
 
 func main() {
@@ -36,11 +36,14 @@ func main() {
 	http.HandleFunc("/submit", func(w http.ResponseWriter, r *http.Request) {
 		r.ParseForm()
 		//for index, value := r.FormValue
+		fmt.Println("Hello World")
+		fmt.Println(r.Form)
 		turingMachineModel.name = r.FormValue("data")
 		var runningtm sync.WaitGroup
 		runningtm.Add(1)
 		runTM(turingMachineModel, "./public/json/data.json", &runningtm)
 		runningtm.Wait()
+		//runTM(turingMachineModel, )
 		http.Redirect(w, r, "/", 301)
 	})
 	log.Println("Listening...")
