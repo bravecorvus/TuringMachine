@@ -1,0 +1,28 @@
+{
+  "name": "turingmachine",
+  "version": "1.0.0",
+  "description": "Turing Machine UI",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilgameshskytrooper/TuringMachine.git"
+  },
+  "keywords": [
+    "ExpressNode",
+    "Turing"
+  ],
+  "author": "Andrew Lee (gilgameshskytrooper)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilgameshskytrooper/TuringMachine/issues"
+  },
+  "homepage": "https://github.com/gilgameshskytrooper/TuringMachine#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
