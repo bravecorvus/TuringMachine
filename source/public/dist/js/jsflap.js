@@ -135,10 +135,16 @@
                     },
                     post: function(scope, elm, attrs) {
                         scope.$on('createTestInput', function(event, index) {
+                            //var currentvalue = scope.testInput.inputString;
+                            //alert(currentvalue);
                             scope.testInputs.splice(index + 1, 0, angular.copy(inputTemplate));
                             setTimeout(function() {
                                 var inputs = elm.find('input');
                                 inputs[index + 1].focus();
+                                //var currentvalue = inputs.val();
+                                //MODDED
+                                //var currentvalue = inputs.val();
+                                //alert(currentvalue);
                             }, 10);
                             scope.$digest();
                         });
@@ -193,6 +199,8 @@
                     });
                     elm.on('click', function() {
                         if(scope.$index === scope.testInputs.length - 1 && scope.testInput.inputString.length === 0) {
+                        var currentvalue = scope.testInput.inputString;
+                        alert(currentvalue);
                             //scope.$emit('createTestInput', scope.$index, false);
                         }
                     });
@@ -2084,7 +2092,7 @@ var jsflap;
                     // Setup each edge
                     if (configResult.edges) {
                         configResult.edges.forEach(function (edge) {
-                            if (edge && edge.length === 3) {
+                            if (edge && edge.length === 5) {
                                 _this.addEdge.apply(_this, edge);
                             }
                         });
@@ -2229,18 +2237,46 @@ var jsflap;
              * @param graph
              */
             FAMachine.prototype.run = function (input, graph) {
+                //MODDED
+                var bool = null;
+                $.ajax({
+                    url: 'testing',
+                    type: 'post',
+                    dataType: 'html',
+                    data : {ajax_post_data: input},
+                    async: false,
+                    success : function(data) {
+                        console.log(data);
+                        if (data == "rejected") {
+                            bool = false;
+                        } 
+                        if (data == "accepted") {
+                            bool = true;
+                        }
+                    },
+                });
+
+                //var file = new File("./currentState.conf");
+                //file.open("r"); // open file with read access
+                //var str = "";
+                    //while (!file.eof) {
+                        // read each line of text
+                        //str += file.readln() + "\n";
+                    //}
+                //file.close();
+                console.log(bool);
                 if (graph) {
                     this.graph = graph;
                 }
-                if (!this.graph.isValid()) {
-                    throw new Error('Invalid graph');
-                }
                 var initialNode = this.graph.getInitialNode(), initialState = new Machine.FAMachineState(input, initialNode);
-                // Trivial case
-                if (!initialNode) {
+                if (bool) {
+                    return true;
+                }
+                if (!bool) {
                     return false;
                 }
                 // Setup for backtracking
+                //console.log(acceptedbool);
                 this.visitedStates = {};
                 this.visitedStates[initialState.toString()] = initialState;
                 this.queue = [initialState];
@@ -2249,7 +2285,7 @@ var jsflap;
                     this.currentState = this.queue.shift();
                     // Check if we are in a final state
                     if (this.currentState.isFinal()) {
-                        return true;
+                        return bool;
                     }
                     // Get the next possible valid states based on the input
                     var nextStates = this.currentState.getNextStates();
@@ -2264,7 +2300,7 @@ var jsflap;
                     }
                 }
                 // If we got here the states were all invalid
-                return false;
+                return bool;
             };
             return FAMachine;
         })();
@@ -2305,7 +2341,9 @@ var jsflap;
                         // See if we can follow this edge
                         var transition = edge.transition;
                         if (transition.canFollowOn(this.input)) {
-                            var inputLength = transition.character.length === 1 && transition.character !== jsflap.LAMBDA ? 1 : 0;
+                            //MODDED
+                            //var inputLength = transition.character.length === 1 && transition.character !== jsflap.LAMBDA ? 1 : 0;
+                            var inputLength = transition.character.length === 3 && transition.character !== jsflap.LAMBDA ? 3 : 0;
                             nextStates.push(new FAMachineState(this.input.substr(inputLength), edge.to));
                         }
                     }
@@ -2472,7 +2510,7 @@ var jsflap;
              * @returns {boolean}
              */
             TMachineState.prototype.isFinal = function () {
-                return this.getNextStates().length === 0 && this.node.final;
+                return this.getNextStates().length === 3 && this.node.final;
             };
             /**
              * Gets the next possible states
@@ -3732,7 +3770,9 @@ var jsflap;
                 value = value !== this.board.graph.getEmptyTransitionCharacter() ? value : '';
                 var etn = new Visualization.EditableTextNode(this.board, target);
                 etn.value = value;
-                etn.maxLength = 1;
+                //Modded
+                etn.maxLength = 3;
+                //etn.maxLength = 1;
                 etn.onComplete = function (wasNormalCompletion) {
                     if (_this.state.editableTextInputField !== etn.inputField) {
                         // The user was no longer editing the transition, don't do anything

@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 app.use(bodyParser.json());
 
 app.post('/submit', function(req, res) {
-    // var data=req;
+     var data=req;
     console.log(req.body); 
     res.redirect('back');
 });
