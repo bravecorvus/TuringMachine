@@ -200,7 +200,7 @@
                     elm.on('click', function() {
                         if(scope.$index === scope.testInputs.length - 1 && scope.testInput.inputString.length === 0) {
                         var currentvalue = scope.testInput.inputString;
-                        alert(currentvalue);
+                        //alert(currentvalue);
                             //scope.$emit('createTestInput', scope.$index, false);
                         }
                     });

@@ -1,0 +1,1 @@
+NFA:({0dR, 11R, ddL, 00R, 1dL, 00L, 11L, ddR, ddS}, {q0, q1, q2, q3, q4}, {(q0, q1, 0dR), (q1, q1, 11R), (q1, q2, ddL), (q1, q1, 00R), (q2, q3, 1dL), (q3, q3, 00L), (q3, q3, 11L), (q3, q0, ddR), (q0, q4, ddS)}, q0, {q4})

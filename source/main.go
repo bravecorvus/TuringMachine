@@ -6,7 +6,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	//"os"
 	"os/exec"
 	"strconv"
 	"strings"
@@ -32,6 +31,10 @@ func runTM(arg string, filepath string) {
 
 	//EXTRACT TRANSITION STATES
 	states := strArray[5:statesEnd]
+	error3 := ioutil.WriteFile("./edges.txt", []byte(strings.Join(strArray, "")), 0644)
+	if error3 != nil {
+		fmt.Println("ERROR")
+	}
 	var alphabet []string
 	var inalphabetlist bool
 	for _, i := range states {
@@ -233,16 +236,8 @@ func main() {
 	http.HandleFunc("/testing", func(w http.ResponseWriter, r *http.Request) {
 		//rawdata = rawdata[0:0]
 		ajax_post_data := r.FormValue("ajax_post_data")
-		fmt.Println("Receive ajax post data string ", ajax_post_data)
+		//fmt.Println("Receive ajax post data string ", ajax_post_data)
 		var status string
-		//for key, _ := range r.Form {
-		//rawdata = append(rawdata, key)
-		//}
-		//fmt.Println(rawdata[0])
-		//var (
-		//cmdOut []byte
-		//err    error
-		//)
 		cmdName := "./TM"
 		cmdArgs := []string{"TM.txt", ajax_post_data}
 		cmd := exec.Command(cmdName, cmdArgs...)
@@ -261,13 +256,17 @@ func main() {
 		}()
 		err = cmd.Start()
 		if err != nil {
-			status = "rejected"
+			if status != "accepted" {
+				status = "rejected"
+			}
 			//fmt.Fprintln(os.Stderr, "rejected")
 			//os.Exit(1)
 		}
 		err = cmd.Wait()
 		if err != nil {
-			status = "rejected"
+			if status != "accepted" {
+				status = "rejected"
+			}
 			//fmt.Fprintln(os.Stderr, "rejected")
 			//os.Exit(1)
 		}
@@ -275,6 +274,7 @@ func main() {
 		//if error2 != nil {
 		//fmt.Println("ERROR")
 		//}
+		fmt.Println(status)
 		w.Write([]byte(status))
 	})
 	log.Println("Listening...")
