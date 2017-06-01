@@ -109,7 +109,7 @@ NFA:({0dR, ddL, 0dL, 1dR, 1dL, 00R, 11R, 00L, 11L, ddS}, {q0, q1, q2, q3, q4, q5
 
 And converts it into a text file that can be read by the C++ program in order to define the Turing Machine description of the file in the [Turing Machine Logic Section](#turing-machine-logic)
 
-Furthermore, in The Test Input section runs an Ajax call to the webserver which run the C++ program by running a shell process supplying the correct TM definition (TM.txt) and then the test input string. I modified the acceptace/rejection portion of the javascript to reflect this.
+Furthermore, in The Test Input section runs an Ajax call to the webserver which run the C++ program by running a shell process supplying the correct TM definition (TM.txt) and then the test input string. I modified the acceptace/rejection portion of bgrawi's Angular javascript to reflect this.
 
 ### [Main GUI Logic](source/public/)
 This implementation is a lightly modified version of [jsflap](https://github.com/bgrawi/jsflap) by @bgrawi. The vast majority of this beautiful UI is of his own making, and my tweaks were only some modifications on his original Angular.js code.
