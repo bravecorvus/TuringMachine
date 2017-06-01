@@ -1,6 +1,7 @@
-# GUI Turing Machine
+# Graphical Turing Machine Implementation
 
 ### By Andrew Lee
+---
 
 ![](assets/cover.png)
 > It seems probable that once the machine thinking method had started, it would not take long to outstrip our feeble powers… They would be able to converse with each other to sharpen their wits. At some stage therefore, we should have to expect the machines to take control.
@@ -9,7 +10,8 @@
 
 
 
-### Project Hierarchy
+---
+## Project Hierarchy
 
 | 	Directory   | Description 	                                                               				|
 | ------------- | ----------------------------------------------------------------------------------------- |
@@ -18,14 +20,13 @@
 | source/  | Specifically the C++ Implementation of the Turing Machine and the Web based GUI written in Golang, HTML5, CSS, Angular.js, which comprise the web server. |
 
 
-This is the final project for St. Olaf CS333 Theory of Computation which consists of creating a full GUI implementation for a Turing Machine.
-
-## Implementation
-
-### Tools
+---
+## Tools
 Angular.js, C++, Golang
+---
+## Description
 
-### Description
+This is the final project for St. Olaf CS333 Theory of Computation which consists of creating a full GUI implementation for a Turing Machine.
 
 There are 3 parts to this Turing Machine implementation.
 
@@ -117,7 +118,7 @@ Furthermore, in The Test Input section runs an Ajax call to the webserver which 
 This implementation is a lightly modified version of [jsflap](https://github.com/bgrawi/jsflap) by @bgrawi. The vast majority of this beautiful UI is of his own making, and my tweaks were only some modifications on his original Angular.js code.
 
 ---
-### Sample Runs (Screen Shots)
+## Sample Runs (Screen Shots)
 
 > The following examples are taken from Chapter 11 of *Theory of Computation* by Wayne Goddard. 
 
