@@ -3,7 +3,12 @@
 ### By Andrew Lee
 
 ![](assets/cover.png)
-> “I'm afraid that the following syllogism may be used by some in the future."\nTuring believes machines think\nTuring lies with men\nTherefore machines do not think"\nYours in distress,\nAlan
+> “I'm afraid that the following syllogism may be used by some in the future.
+>   "Turing believes machines think
+>   "Turing lies with men
+>   "Therefore machines do not think"
+> Yours in distress,
+> Alan
 
 
 
