@@ -116,7 +116,7 @@ This implementation is a lightly modified version of [jsflap](https://github.com
 
 ### Sample Runs (Screen Shots)
 
-***The following examples are taken from Chapter 11 of *Theory of Computation* by Wayne Goddard. The specific examples/exercise can be seen if you hover over the screenshot link.
+***The following examples are taken from Chapter 11 of *Theory of Computation* by Wayne Goddard. The specific examples/exercise can be seen if you hover over the screenshot link.***
 
 turing machine that accepts the language of binary that contains the specific string 101.
 ![Example 11.4](assets/11.1.png)
