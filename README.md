@@ -25,7 +25,7 @@
 
 | 	Component   | Implementation Description 	                                           |
 | ------------- | -------------------------------------------------------- |
-| Front-End  | [HTML](source/public/index.html)/[CSS](source/public/dist/css/jsflap.css)/[Angular.js](source/public/dist/js/jsflap.js) (borrowed heavily from [jsflap](https://github.com/bgrawi/jsflap) |
+| Front-End  | [HTML](source/public/index.html)/[CSS](source/public/dist/css/jsflap.css)/[Angular.js](source/public/dist/js/jsflap.js) (borrowed heavily from [jsflap](https://github.com/bgrawi/jsflap))|
 | [Webserver](source/main.go) | Golang |
 | [TM Logic](source/TM.cpp) | C++ |
 
