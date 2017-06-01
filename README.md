@@ -4,15 +4,25 @@
 
 ![](assets/cover.png)
 > “I'm afraid that the following syllogism may be used by some in the future.
+
 </br>
+
 >   "Turing believes machines think
+
 </br>
+
 >   "Turing lies with men
+
 </br>
+
 >   "Therefore machines do not think"
+
 </br>
+
 > Yours in distress,
+
 </br>
+
 > - Alan
 
 
