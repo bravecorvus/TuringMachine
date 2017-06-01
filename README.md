@@ -14,8 +14,8 @@
 | 	Directory   | Description 	                                                               				|
 | ------------- | ----------------------------------------------------------------------------------------- |
 | assets/  | Content related the the aesthetic presentation of this project such as images  |
-| testing/  | Directory for testing various features.  |
-| source/  | Specifically the C++ Implementation of the Turing Machine and the Web based GUI written in Golang, HTML5, CSS, Javascript, which comprise the web server. |
+| testing/  | Directory for testing various implementations. No relation to final project  |
+| source/  | Specifically the C++ Implementation of the Turing Machine and the Web based GUI written in Golang, HTML5, CSS, Angular.js, which comprise the web server. |
 
 
 This is the final project for St. Olaf CS333 Theory of Computation which consists of creating a full GUI implementation for a Turing Machine.
