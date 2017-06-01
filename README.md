@@ -116,18 +116,21 @@ This implementation is a lightly modified version of [jsflap](https://github.com
 
 ### Sample Runs (Screen Shots)
 
-> The following examples are taken from Chapter 11 of *Theory of Computation* by Wayne Goddard. The specific examples/exercise can be seen if you hover over the screenshot link.
+> The following examples are taken from Chapter 11 of *Theory of Computation* by Wayne Goddard. 
 
-turing machine that accepts the language of binary that contains the specific string 101.
-![Example 11.4](assets/11.1.png)
 
-turing machine that accepts all even length palindromes.
+Example 11.1 (page 113): turing machine that accepts the language of binary that contains the specific string 101.
+![Example 11.1](assets/11.1.png)
+
+
+
+Example 11.4 (page 116): turing machine that accepts all even length palindromes.
 ![Example 11.4](assets/11.4.png)
 
-turing machine that accepts the language of binary that is in the form ![](https://latex.codecogs.com/gif.latex?0%5E%7Bn%7D1%5E%7Bn%7D) (n 0's followed by n 1's).
-![Example 11.4](assets/11.4.png)
+Example 11.2 (page 113): turing machine that accepts the language of binary that is in the form ![](https://68.media.tumblr.com/c365aa680724e3c0389720b4d3c2e0a8/tumblr_oqur43UVye1s5a4bko1_75sq.gif) (n 0's followed by n 1's).
+![Example 11.1](assets/ex11.1.png)
 
-turing machine that accepts the language of binary that has the same number of 0's and 1's (but in no particular order)
+Exercise 11.13: turing machine that accepts the language of binary that has the same number of 0's and 1's (but in no particular order)
 ![Exercise 11.13](assets/ex11.13.png)
 
 ## Contact
