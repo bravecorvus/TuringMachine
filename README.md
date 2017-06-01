@@ -15,9 +15,9 @@
 
 | 	Directory   | Description 	                                                               				|
 | ------------- | ----------------------------------------------------------------------------------------- |
-| assets/  | Content related the the aesthetic presentation of this project such as images  |
-| testing/  | Directory for testing various implementations. No relation to final project  |
-| source/  | Specifically the C++ Implementation of the Turing Machine and the Web based GUI written in Golang, HTML5, CSS, Angular.js, which comprise the web server. |
+| [assets/](assets/)  | Content related the the aesthetic presentation of this project such as images  |
+| [testing/](testing/)  | Directory for testing various implementations. No relation to final project  |
+| [source/](source/)  | Specifically the C++ Implementation of the Turing Machine and the Web based GUI written in Golang, HTML5, CSS, Angular.js, which comprise the web server. |
 
 
 ---
