@@ -26,8 +26,10 @@ This is the final project for St. Olaf CS333 Theory of Computation which consist
 Angular.js, C++, Golang
 
 ### Description
+
 There are 3 parts to this Turing Machine implementation.
-| 	Directory   | Description 	                                           |
+
+| 	Component   | Implementation Description 	                                           |
 | ------------- | -------------------------------------------------------- |
 | Front-End  | HTML/CSS/Angular.js (borrowed heavily from [jsflap](https://github.com/bgrawi/jsflap) |
 | Webserver | Golang |
