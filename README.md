@@ -107,7 +107,7 @@ The webserver takes the modified TM definition (as defined by the original FA cr
 NFA:({0dR, ddL, 0dL, 1dR, 1dL, 00R, 11R, 00L, 11L, ddS}, {q0, q1, q2, q3, q4, q5, q6}, {(q0, q1, 0dR), (q1, q2, ddL), (q2, q3, 0dL), (q0, q4, 1dR), (q4, q5, ddL), (q5, q3, 1dL), (q1, q1, 00R), (q1, q1, 11R), (q3, q3, 00L), (q3, q3, 11L), (q4, q4, 00R), (q4, q4, 11R), (q0, q6, ddS)}, q0, {q6})
 ```
 
-And converts it into a text file that can be read by the C++ program in order to define the Turing Machine (description of the file in the [Turing Machine Logic Section](###turing-machine-logic]
+And converts it into a text file that can be read by the C++ program in order to define the Turing Machine (description of the file in the [Turing Machine Logic Section](#turing-machine-logic]
 
 Furthermore, in The Test Input section runs an Ajax call to the webserver which run the C++ program by running a shell process supplying the correct TM definition (TM.txt) and then the test input string. I modified the acceptace/rejection portion of the javascript to reflect this.
 
