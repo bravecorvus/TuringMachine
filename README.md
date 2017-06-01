@@ -36,7 +36,14 @@ There are 3 parts to this Turing Machine implementation.
 | TM Logic | C++ |
 
 ### Turing Machine Logic
-To run this, you need to go into source, and build TM.cpp (you will need to pass std=c++11, std=c++14, or std=c++17, since this C++ program uses newer STL features like tuples. Essentially, the C++ program is the Turing Machine logic that is able to read the format in the following format:
+To run this, you need to go into source, and build TM.cpp (you will need to pass std=c++11, std=c++14, or std=c++17, since this C++ program uses newer STL features like tuples).
+
+Example compile configuration (should work in GCC or Clang)
+```
+g++ -std=c++11 -o TM TM.cpp
+```
+
+Essentially, the C++ program is the Turing Machine logic that is able to read the format in the following format:
 
 ```
 7
