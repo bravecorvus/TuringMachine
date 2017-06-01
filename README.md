@@ -25,7 +25,7 @@ This is the final project for St. Olaf CS333 Theory of Computation which consist
 ### Tools
 Angular.js, C++, Golang
 
-### [Description]
+### Description
 There are 3 parts to this Turing Machine implementation.
 | 	Directory   | Description 	                                           |
 | ------------- | -------------------------------------------------------- |
@@ -33,7 +33,7 @@ There are 3 parts to this Turing Machine implementation.
 | Webserver | Golang |
 | TM Logic | C++ |
 
-## Turing Machine Logic
+### Turing Machine Logic
 To run this, you need to go into source, and build TM.cpp (you will need to pass std=c++11, std=c++14, or std=c++17, since this C++ program uses newer STL features like tuples. Essentially, the C++ program is the Turing Machine logic that is able to read the format in the following format:
 
 ```
@@ -83,7 +83,7 @@ Then each subsequent block of text represents a state (there should be 7 in the 
 
 In every defining a transition, there will be 3 chars. The first char represents the write value (In the above example, if the first char of line 2 in a block is d [delta], then the transition is to write a d when it sees a 1). The second char is either 1, 0, or -1, and represents the R/S/L operation of moving the head of the input string. The 3rd char is the next state to go to after doing the operation.
 
-## Webserver
+### Webserver
 Next, you need to run the webserver which is written in Golang. 
 
 ```
@@ -100,7 +100,7 @@ The webserver takes the modified TM definition (as defined by the original FA cr
 NFA:({0dR, ddL, 0dL, 1dR, 1dL, 00R, 11R, 00L, 11L, ddS}, {q0, q1, q2, q3, q4, q5, q6}, {(q0, q1, 0dR), (q1, q2, ddL), (q2, q3, 0dL), (q0, q4, 1dR), (q4, q5, ddL), (q5, q3, 1dL), (q1, q1, 00R), (q1, q1, 11R), (q3, q3, 00L), (q3, q3, 11L), (q4, q4, 00R), (q4, q4, 11R), (q0, q6, ddS)}, q0, {q6})
 ```
 
-And converts it into a text file that can be read by the C++ program in order to define the Turing Machine (description of the file in the [Turing Machine Logic Section](## Turing Machine Logic).
+And converts it into a text file that can be read by the C++ program in order to define the Turing Machine (description of the file in the [Turing Machine Logic Section](### Turing Machine Logic).
 
 Furthermore, in The Test Input section runs an Ajax call to the webserver which run the C++ program by running a shell process supplying the correct TM definition (TM.txt) and then the test input string. I modified the acceptace/rejection portion of the javascript to reflect this.
 
